@@ -42,15 +42,15 @@ else
     echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
 fi
 
-# Cas erreur 3 : 
+# Cas erreur 1 : 
 
 echo ------------------------------------------------------------------
-echo "Test erreur 3 : affiche rien ne s'affiche"
+echo "Test erreur 1 : il manque un paramètre"
 echo ------------------------------------------------------------------
 # Valeurs du test
 PARAMETER=
-EXPECTED_VALUE=
-RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
+EXPECTED_VALUE="il manque un paramètre"
+RECEIVED_VALUE=$(./exo_1.sh)
 
 if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
     echo "✅ Test réussi"
