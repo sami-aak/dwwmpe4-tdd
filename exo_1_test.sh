@@ -26,7 +26,7 @@ else
 fi
 
 
-# Cas nominal 2 : 75 => 1m5s
+# Cas nominal 2 : 75 => 1m15s
 
 echo ------------------------------------------------------------------
 echo "Test nominal 2 : 75 affiche 1m15s"
@@ -34,6 +34,22 @@ echo ------------------------------------------------------------------
 # Valeurs du test
 PARAMETER=75
 EXPECTED_VALUE=1m15s
+RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
+
+if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
+    echo "✅ Test réussi"
+else
+    echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
+fi
+
+# Cas erreur 3 : 
+
+echo ------------------------------------------------------------------
+echo "Test erreur 3 : rien ne s'affiche"
+echo ------------------------------------------------------------------
+# Valeurs du test
+PARAMETER=
+EXPECTED_VALUE=
 RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
 
 if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
