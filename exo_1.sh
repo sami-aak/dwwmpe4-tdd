@@ -16,11 +16,15 @@ if [[ $1 -lt 0 ]]; then
     exit 2
     fi
 
-
-MIN=$(( $1/60 ))
+HOUR=$(( $1/3600))
+MIN=$(( $1/60%60 ))
 SEC=$(( $1%60 ))
-if [[ $1 > 60 ]]; then
-    echo "${MIN}m${SEC}s"
+if [[ $1 -gt 3600 ]]; then
+    echo "${HOUR}h${MIN}m${SEC}s"
     else
-    echo "${1}s"
+        if [[ $1 -gt 60  ]]; then
+            echo "${MIN}m${SEC}s"
+        else
+            echo "${1}s"
+        fi
 fi
