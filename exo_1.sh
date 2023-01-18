@@ -5,6 +5,11 @@ if [[ $# < 1 ]]; then
  exit 1
  fi
 
+if [[ $1 -lt 0 ]]; then
+    echo "erreur, le paramètre est négatif"
+    exit 2
+    fi
+
 MIN=$(( $1/60 ))
 SEC=$(( $1%60 ))
 if [[ $1 > 60 ]]; then
