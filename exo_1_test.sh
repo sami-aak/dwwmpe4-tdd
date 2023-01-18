@@ -24,3 +24,20 @@ if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
 else
     echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
 fi
+
+
+# Cas nominal 2 : 75 => 1m5s
+
+echo ------------------------------------------------------------------
+echo "Test nominal 2 : 75 affiche 1m15s"
+echo ------------------------------------------------------------------
+# Valeurs du test
+PARAMETER=75
+EXPECTED_VALUE=1m15s
+RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
+
+if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
+    echo "✅ Test réussi"
+else
+    echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
+fi
