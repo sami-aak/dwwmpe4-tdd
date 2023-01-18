@@ -80,7 +80,7 @@ echo ------------------------------------------------------------------
 echo "Test erreur 3 : erreur, le paramètre n'est pas un nombre"
 echo ------------------------------------------------------------------
 # Valeurs du test
-PARAMETER=-17
+PARAMETER=titi
 EXPECTED_VALUE="erreur, le paramètre n'est pas un nombre"
 RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
 
