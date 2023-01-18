@@ -45,7 +45,7 @@ fi
 # Cas erreur 3 : 
 
 echo ------------------------------------------------------------------
-echo "Test erreur 3 : rien ne s'affiche"
+echo "Test erreur 3 : affiche rien ne s'affiche"
 echo ------------------------------------------------------------------
 # Valeurs du test
 PARAMETER=
