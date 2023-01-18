@@ -73,3 +73,19 @@ if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
 else
     echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
 fi
+
+# Cas erreur 3 : 
+
+echo ------------------------------------------------------------------
+echo "Test erreur 3 : erreur, le paramètre n'est pas un nombre"
+echo ------------------------------------------------------------------
+# Valeurs du test
+PARAMETER=-17
+EXPECTED_VALUE="erreur, le paramètre n'est pas un nombre"
+RECEIVED_VALUE=$(./exo_1.sh $PARAMETER)
+
+if [[ "$EXPECTED_VALUE" = "$RECEIVED_VALUE" ]]; then
+    echo "✅ Test réussi"
+else
+    echo "❌ Test raté ! (valeur attendue : [$EXPECTED_VALUE], valeur reçue : [$RECEIVED_VALUE] )"
+fi
